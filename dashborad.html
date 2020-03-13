@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<title> Dashboard </title>
+
+		<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<!-- running -->
+		<style type="text/css">
+			.sidenav{
+				/*width: 100%;*/
+				position: fixed;
+				padding: 0;
+				background-color: #fff;
+				height: 100vh;
+				padding-left: 10px;
+				box-shadow: 0px 0px 2px 0px;
+			}
+
+			.list-group{
+				padding-left: 18px;
+				padding-left: 0px;
+
+			}
+
+			.list-group, .sidenav, .list-group .list-group-item {
+				width: 100%
+			}
+
+			.list-group .list-group-item:first-child{
+				padding: 10%;
+				text-align: center;
+			}
+
+			.sidenav div.list-group a.list-group-item-action:first-child:hover{
+				background-color: #fff;
+			}
+
+			.list-group .list-group-item:last-child{
+				position: absolute;
+				bottom: 0;
+				left: 0px;
+				box-shadow: -11px -2px 4px 1px #eee;
+			}
+			.list-group .list-group-item{
+				border:0;
+				
+			}
+
+			.list-group .list-group-item-action:hover{
+				/*background-color: #fff;*/
+				font-weight: bold;
+			}
+
+			.sub-item .list-group-item{
+				position: unset !important;
+				text-align: left !important;
+				padding: 8px 10% !important;
+				margin-left: 21px;
+				width: 90%;
+				box-shadow: 0px 0px 0px 0px #bdbdbd47 !important;
+				border-left: 3px solid #bdbdbd47 !important;
+				border-radius: unset;
+			}
+
+			.sub-item .list-group-item-action:hover{
+				background-color: #eee !important;
+			}
+
+			#side-footer > li.list-group-item{
+				padding: 8px;
+				text-align: center;
+				position: unset;
+				box-shadow: none;
+				z-index: 1024
+			}
+
+
+
+			@media (max-width: 750px){
+
+				#nav {
+					display: none;
+				}
+
+				.side-toogle{
+					display: block !important;
+				}
+
+				#nav {
+					flex-basis: unset !important;
+					max-width: 100%;
+					padding: 0;
+				}
+
+				#nav .sidenav .list-group{
+					padding-left: 0;
+				}
+			}
+		</style>
+
+		<style type="text/css">
+			.border-left-dark{
+				/*color: #333 !important;*/
+				border-left: 4px solid #333 !important;
+			}
+
+			.border-left-primary{
+				/*color: #4e73df !important;*/
+				border-left:.25rem solid #4e73df  !important;
+
+			}
+
+			.border-left-success{
+				border-left:.25rem solid #1cc88a !important;
+				/*color: #1cc88a !important*/
+			}
+
+			.border-left-warning {
+			    border-left: .25rem solid #f6c23e !important;
+			    /*color: #f6c23e !important*/
+			}
+
+			.card-header {
+			    background-color: rgba(189, 189, 189, 0.03) !important;
+			}
+
+			.footer{
+				position: absolute;
+				bottom: 0;
+				padding: 1%;
+				text-align: center;
+				box-shadow: 0 0 4px#eee;
+				width: 98%;
+				margin-left: .6%;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div class="app row" style="margin-right: 0">
+			<div id='nav' class="col col-2 col-lg-2 col-md-3" style="z-index: 1">
+				<div class="sidenav" style="width: 17%;">
+					<div class="list-group" style="overflow: auto;height: 85vh;">
+						<a href="#" class="list-group-item list-group-item-action ">
+							<h3> Admin Panel</h3>
+							<button type="button" class="close d-md-none" aria-label="Close" onclick="$('#nav').toggleClass('side-toogle')">
+					
+
+							  <span aria-hidden="true">&times;</span>
+							</button>
+						</a>
+						<a href="#" class="list-group-item list-group-item-action">
+							<i class="fa fa-desktop"></i>
+							Dashboard
+						</a>
+						<a href="#!" class="list-group-item list-group-item-action" data-toggle="collapse" data-target="#collapseOne">
+							<i class="fa fa-users"></i>
+							User
+						</a>
+						<div id="collapseOne" class="collapse sub-item" >
+							<a href="#" class="list-group-item list-group-item-action">
+								Users
+							</a>
+							<a href="#" class="list-group-item list-group-item-action">
+								Create User
+							</a>
+					    </div>
+						<a href="#" class="list-group-item list-group-item-action">
+							<i class="fa fa-tasks"></i>
+							Projects
+						</a>
+						<a href="#" class="list-group-item list-group-item-action">
+							<i class="fa fa-rss-square"></i>
+							Trining
+						</a>
+						<div class="list-group-item" style="padding: 0;">
+							<div id='side-footer' class="list-group list-group-horizontal">
+							  <li class="list-group-item list-group-item-action"> 
+							  	<a href="#!"><i class="fa fa-cog fa-1x"  style="font-size: 1.5rem;"></i></a>
+							  </li>
+							  <li class="list-group-item list-group-item-action"> 
+							  	<a href="#!"><i class="fa fa-sign-out fa-1x" style="font-size: 1.5rem;"></i> </a>
+							  </li>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col col-12 col-lg-10 col-md-9" style="padding-right: 0px;"]>
+				<div class="jumbotron" style="height: 238px;position: fixed;width: 100%;background-color: #16b1c1;color: white">
+					<button class="navbar-toggler text-secondary" type="button" onclick="$('#nav').toggleClass('side-toogle')" >
+					    <span class="navbar-toggler-icon"></span>
+					</button>
+					<h3> Dashboard </h3>
+				</div>
+				<div class="container" style="margin-bottom: 10%">
+					<div class="card" style="margin-top: 16%;">
+					  <!-- <img src="..." class="card-img-top" alt="..."> -->
+					  <div class="card-body">
+					  	<div class="row">
+					  		<div class="col-3">	
+						  		<div class="card border-left-dark mb-3 " style="max-width: 18rem;">
+								  <div class="card-body">
+								    <small class="card-title text-dark">Have 10 Users </small>
+								    <p class="card-text">8 student  |  2 Admin</p>
+								    <p class="card-text"></p>
+								  </div>
+								</div>
+							</div>
+							<div class="col-3">	
+						  		<div class="card border-left-success mb-3 " style="max-width: 18rem;">
+								  <div class="card-body">
+								    <small class="card-title text-success">New Users </small>
+								    <p class="card-text">Have 301 users deactive </p>
+								    <p class="card-text"></p>
+								  </div>
+								</div>
+							</div>
+							<div class="col-3">	
+						  		<div class="card border-left-primary mb-3 " style="max-width: 18rem;">
+								  <div class="card-body">
+								    <small class="card-title text-primary">Have 20 Project </small>
+								    <p class="card-text">8 Active  |  12 Deactive</p>
+								    <p class="card-text"></p>
+								  </div>
+								</div>
+							</div>
+							<div class="col-3">	
+						  		<div class="card border-left-warning mb-3 " style="max-width: 18rem;">
+								  <div class="card-body">
+								    <small class="card-title text-warning">College</small>
+								    <p class="card-text">Have 4 college</p>
+								    <p class="card-text"></p>
+								  </div>
+								</div>
+							</div>
+					  	</div>
+
+					  	<div class="row">
+					  		<div class="col col-12 col-sm-6">
+						  		<div class="card">
+						  			<div class="card-header">
+									    Users 
+									</div>
+									<div class="container" style="margin-top: 10px">
+							  			<div class="card-body" >
+							  				<table class="table table-hover">
+											  <thead>
+												    <tr>
+												      <th scope="col">#</th>
+												      <th scope="col">First</th>
+												      <th scope="col">Last</th>
+												      <th scope="col">Handle</th>
+												    </tr>
+											  </thead>
+											  <tbody>
+												    <tr>
+												      <th scope="row">1</th>
+												      <td>Mark</td>
+												      <td>Otto</td>
+												      <td>@mdo</td>
+												    </tr>
+												    <tr>
+												      <th scope="row">2</th>
+												      <td>Jacob</td>
+												      <td>Thornton</td>
+												      <td>@fat</td>
+												    </tr>
+												    <tr>
+												      <th scope="row">3</th>
+												      <td colspan="2">Larry the Bird</td>
+												      <td>@twitter</td>
+												    </tr>
+											  </tbody>
+											</table>
+							  			</div>
+							  		</div>
+						  		</div>
+					  		</div>
+					  		<div class="col col-12 col-sm-6">
+						  		<div class="card">
+						  			<div class="card-header">
+									    Projects 
+									</div>
+									<div class="container" style="margin-top: 10px">
+							  			<div class="card-body" >
+							  				<table class="table table-hover">
+											  <thead>
+												    <tr>
+												      <th scope="col">#</th>
+												      <th scope="col">First</th>
+												      <th scope="col">Last</th>
+												      <th scope="col">Handle</th>
+												    </tr>
+											  </thead>
+											  <tbody>
+												    <tr>
+												      <th scope="row">1</th>
+												      <td>Mark</td>
+												      <td>Otto</td>
+												      <td>@mdo</td>
+												    </tr>
+												    <tr>
+												      <th scope="row">2</th>
+												      <td>Jacob</td>
+												      <td>Thornton</td>
+												      <td>@fat</td>
+												    </tr>
+												    <tr>
+												      <th scope="row">3</th>
+												      <td colspan="2">Larry the Bird</td>
+												      <td>@twitter</td>
+												    </tr>
+											  </tbody>
+											</table>
+							  			</div>
+							  		</div>
+						  		</div>
+					  		</div>
+					  	</div>
+					  	<br>
+					  	<div class="row">
+					  		<div class="col col-12">
+						  		<div class="card">
+						  			<div class="card-header">
+									    Colleges  
+									    <button class="btn btn-primary float-right btn-sm"  data-toggle="modal" data-target="#staticBackdrop"> 
+									    	<i class="fa fa-plus"></i> 
+									   	</button>
+									   	<div class="modal fade" id="staticBackdrop" data-backdrop="static">
+											  <div class="modal-dialog" >
+											    <div class="modal-content">
+											      <div class="modal-body">
+											        <form id="add_college">
+													  <div class="form-group">
+													    <label for="exampleFormControlInput1"> College Name </label>
+													    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name College">
+													  </div>
+													</form>
+											      </div>
+											      <div class="modal-footer">
+											        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+											        <button type="button" class="btn btn-primary" id='btn_add_college' >Add</button>
+											      </div>
+											    </div>
+											  </div>
+										</div>
+									</div>
+									<div class="container" style="margin-top: 10px">
+							  			<div class="card-body" >
+							  				<table class="table table-hover" id='table_college'>
+											  <thead>
+												    <tr>
+												      <th scope="col">#</th>
+												      <th scope="col">Name</th>
+												      <th scope="col">Students</th>
+												      <th scope="col">Projects</th>
+												    </tr>
+											  </thead>
+											  <tbody>
+												    <tr>
+												      <th scope="row">1</th>
+												      <td>Mark</td>
+												      <td>10</td>
+												      <td>40</td>
+												    </tr>
+												    <tr>
+												      <th scope="row">2</th>
+												      <td>Jacob</td>
+												      <td>5</td>
+												      <td>1</td>
+												    </tr>
+											  </tbody>
+											</table>
+							  			</div>
+							  		</div>
+						  		</div>
+					  		</div>
+					  	</div>
+
+					  	<div class="row">
+					  		<div class="col col-12" style="margin-top: 1%;">
+					  			<div class="card">
+					  				<div class="card-header">
+					  					Training
+					  				</div>
+					  				<div class="card-body">
+								  		<blockquote class="blockquote">
+										  <p class="mb-0">
+										  	Learn how to use Git and Github with alaa akiel.
+										  </p>
+										  <footer class="blockquote-footer">Code For Iraq 
+										  		<cite title="Source Title"> 2020/2/21 </cite>
+										  </footer>
+										</blockquote>
+									</div>
+								</div>
+							</div>
+					  	</div>
+
+					  </div>
+					</div>
+				</div>
+				<div class="footer" >
+					Copyright © Alaa Akiel 2019
+				</div>
+			</div>
+		</div>
+
+
+		<!-- JQueryJs, BootstrapJs, PopperJs -->
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('[data-toggle=sidebar-colapse]').click(function() {
+				    SidebarCollapse();
+				});
+
+				$('#btn_add_college').click(function(){
+
+					$('#table_college').find('tbody').append(`
+						<tr>
+							<th scope="row">2</th>
+					      	<td>${$('#add_college input').val()}</td>
+					      	<td>0</td>
+					      	<td>0</>
+					    </tr>
+					    `);
+				});
+			})
+		</script>
+	</body>
+</html>
