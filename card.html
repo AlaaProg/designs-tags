@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title> Card </title>
+
+		<style type="text/css">
+			*, :after, :before {
+			    -webkit-box-sizing: inherit;
+			    box-sizing: inherit;
+			}
+			body{
+
+				background-color: #eee;
+			}
+			.card{
+				max-width: 100%;
+				position: relative;
+				background-color: #fff;
+				display: -webkit-box;
+			    display: -ms-flexbox;
+				display: flex;
+				flex-direction: column;
+			}
+			.card .content{
+				padding: .75em 1em;
+				border-top: 1px solid rgba(34,36,38,.1);
+				display: block;
+				position: static;
+			}
+			.card .content .title{
+				font-size: 1.4rem;
+				color: #333;
+			}
+
+			.card .image img{
+				display: block;
+			    width: 100%;
+			}
+
+			.group-cards{
+				display: -webkit-box;
+    			display: -ms-flexbox;
+				display: flex;
+				-ms-flex-wrap: wrap;
+				flex-wrap: wrap;
+
+			}
+			.group-cards > .card{
+				margin: .30%;
+			    width: 280px;
+			}
+
+			.group-cards.center{
+				justify-content: center;
+			}
+
+
+			
+			a{
+				color: rgba(0,0,0,.4);
+				text-decoration: unset;
+			}
+			a:hover{
+
+				color: #333;
+			}
+		</style>
+
+		<style type="text/css">
+			.container {
+			  	padding-right: 15px;
+			    padding-left: 15px;
+			    margin-right: auto;
+			    margin-left: auto;
+			    width: 1170px;
+			}
+			.text-nowrap{
+				text-overflow: ellipsis;
+				overflow: hidden;
+				white-space: nowrap;
+			}
+			.text-wrap{
+				text-overflow: ellipsis;
+				overflow: hidden;
+			}
+			.link{
+				
+				color: hsl(204, 86%, 53%)
+			}
+
+			.link:hover{
+				color: hsl(217, 71%, 53%);
+			}
+
+			.pull-right{
+				float: right;
+			}
+			.pull-left{
+				float: left;
+			}
+		</style>
+
+		<style type="text/css">
+			.card .content .sub{
+				color: #6669;
+				padding: 0% 0 1% 0.50%; 
+			}
+			.card .content .text{
+
+				color: #344;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container" style="margin-top: 5%">
+			<div class="group-cards " >
+				<div class="card " >
+					<div class="content">
+						Card Header
+					</div>
+					<div class="content">
+						<a class="title" href="#!"> Title Card </a>
+						<div class="sub"> hi world </div>
+						<div class="text text-wrap" style="height: 36px">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat.
+						</div>
+						<a href="#!" class="link"> read more </a>
+					</div>
+					<div class="content">
+						<a href="#!" > @Alaa Akiel </a>
+					</div>
+				</div>
+				<div class="card " >
+					<div class="content">
+						Card Header
+					</div>
+					<div class="content">
+						<a class="title" href="#!"> Title Card </a>
+						<div class="sub"> hi world </div>
+						<div class="text text-wrap" style="height: 36px">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat.
+						</div>
+						<a href="#!" class="link"> read more </a>
+					</div>
+					<div class="content">
+						<a href="#!" > @Alaa Akiel </a>
+					</div>
+				</div>
+				<div class="card " >
+					<div class="content">
+						Card Header
+					</div>
+					<div class="content">
+						<a class="title" href="#!"> Title Card </a>
+						<div class="sub"> hi world </div>
+						<div class="text text-wrap" style="height: 36px">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat.
+						</div>
+						<a href="#!" class="link"> read more </a>
+					</div>
+					<div class="content">
+						<a href="#!" > @Alaa Akiel </a>
+					</div>
+				</div>
+				<div class="card " >
+					<div class="content">
+						Card Header
+					</div>
+					<div class="content">
+						<a class="title" href="#!"> Title Card </a>
+						<div class="sub"> hi world </div>
+						<div class="text text-wrap" style="height: 36px">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat.
+						</div>
+						<a href="#!" class="link"> read more </a>
+					</div>
+					<div class="content">
+						<a href="#!" > @Alaa Akiel </a>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="card" >
+					<div class="content">
+						Card Header
+					</div>
+					<div class="content">
+						<a class="title" href="#!"> Title Card </a>
+						<div class="sub"> hi world </div>
+						<div class="text text-wrap" style="height: 36px">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat.
+						</div>
+						<a href="#!" class="link"> read more </a>
+					</div>
+					<div class="content">
+						<a href="#!" > @Alaa Akiel </a>
+					</div>
+			</div>
+			<br>
+			<div class="group-cards center" >
+				<div class="card" style="width: 20rem">
+					<div class="image">
+						<img src="https://yt3.ggpht.com/a/AGF-l79LuNn9OaWwvdQwflctJSdn5XBxAiFP5C8L6Q=s900-c-k-c0xffffffff-no-rj-mo">
+					</div>
+					<div class="content">
+						<a class="title" href="#!"> Alaa Akile </a>
+						<div class="sub"> Web Developer </div>
+					</div>
+					<div class="content">
+						<a href="https://github.com/alaaProg" > @Alaa Akiel </a>
+					</div>
+				</div>
+				<div class="card" style="width: 20rem">
+					<div class="image">
+						<img src="https://yt3.ggpht.com/a/AGF-l79LuNn9OaWwvdQwflctJSdn5XBxAiFP5C8L6Q=s900-c-k-c0xffffffff-no-rj-mo">
+					</div>
+					<div class="content">
+						<a class="title" href="#!"> Alaa Akile </a>
+						<div class="sub"> Web Developer </div>
+					</div>
+					<div class="content">
+						<a href="#!"> card image </a>
+						<a href="https://github.com/alaaProg" class="pull-right"> @Alaa Akiel </a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
